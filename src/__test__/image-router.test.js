@@ -2,7 +2,7 @@
 
 import superagent from 'superagent';
 import { startServer, stopServer } from '../lib/server';
-import { pCreateImageMock, pRemoveImageMock } from './lib/image-mock';
+import { pCreateImageMock } from './lib/image-mock';
 
 const apiUrl = `http://localhost:${process.env.PORT}`;
 

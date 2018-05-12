@@ -31,8 +31,8 @@ var pCreateImageMock = function pCreateImageMock() {
     return new _image2.default({
       title: _faker2.default.lorem.words(5),
       url: _faker2.default.random.image(),
-      account: resultMock.accountMock.account._id,
-      awskey: _faker2.default.lorem.words(1)
+      account: resultMock.accountMock.account._id
+      // awskey: faker.lorem.words(1),
     }).save();
   }).then(function (image) {
     resultMock.image = image;
