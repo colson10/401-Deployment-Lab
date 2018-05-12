@@ -54,10 +54,10 @@ imageRouter.get('/images/:id', bearerAuthMiddleware, (request, response, next) =
 });
 
 imageRouter.delete('/images/:id', bearerAuthMiddleware, (request, response, next) => { 
-  console.log(request.params.id, 'this is the params id');
+  // console.log(request.params.id, 'this is the params id');
   return Image.findById(request.params.id)
     .then((image) => {
-      console.log(image, 'this is the image in the delete route');
+      // console.log(image, 'this is the image in the delete route');
       if (!image._id) {
         return next(new HttpError(404, 'DELETE - image not found'));
       }
