@@ -20,10 +20,10 @@ const imageSchema = mongoose.Schema({
     required: true,
   },
 
-  awskey: {
-    type: String,
-    required: true,
-  },
+  // awskey: {
+  //   type: String,
+  //   required: true,
+  // },
 });
 
 export default mongoose.model('image', imageSchema);

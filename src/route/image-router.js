@@ -30,7 +30,7 @@ imageRouter.post('/images', bearerAuthMiddleware, multerUpload.any(), (request, 
         title: request.body.title,
         account: request.account._id,
         url: awsUrl,
-        awskey: key,
+        // awskey: key,
       }).save();
     })
     .then((image) => {
@@ -61,7 +61,7 @@ imageRouter.delete('/images/:id', bearerAuthMiddleware, (request, response, next
       if (!image._id) {
         return next(new HttpError(404, 'DELETE - image not found'));
       }
-      return s3Remove(image.awskey);
+      return s3Remove(image.url); // image.awskey?
     })
     .then(() => response.sendStatus(204));
 });

@@ -28,12 +28,12 @@ var imageSchema = _mongoose2.default.Schema({
   account: {
     type: _mongoose2.default.Schema.Types.ObjectId,
     required: true
-  },
-
-  awskey: {
-    type: String,
-    required: true
   }
+
+  // awskey: {
+  //   type: String,
+  //   required: true,
+  // },
 });
 
 exports.default = _mongoose2.default.model('image', imageSchema);

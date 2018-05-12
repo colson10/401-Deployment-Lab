@@ -50,8 +50,8 @@ imageRouter.post('/images', _bearerAuthMiddleware2.default, multerUpload.any(), 
     return new _image2.default({
       title: request.body.title,
       account: request.account._id,
-      url: awsUrl,
-      awskey: key
+      url: awsUrl
+      // awskey: key,
     }).save();
   }).then(function (image) {
     // console.log(image, 'this is the image in the s3upload being returned');
@@ -77,7 +77,7 @@ imageRouter.delete('/images/:id', _bearerAuthMiddleware2.default, function (requ
     if (!image._id) {
       return next(new _httpErrors2.default(404, 'DELETE - image not found'));
     }
-    return (0, _s.s3Remove)(image.awskey);
+    return (0, _s.s3Remove)(image.url); // image.awskey?
   }).then(function () {
     return response.sendStatus(204);
   });

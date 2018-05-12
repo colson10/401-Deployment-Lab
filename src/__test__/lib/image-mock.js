@@ -1,7 +1,7 @@
 'use strict';
 
 import faker from 'faker';
-import { pCreateAccountMock, pRemoveAccountMock } from './mock-account';
+import { pCreateAccountMock } from './mock-account';
 import Image from '../../model/image';
 import Account from '../../model/account';
 
@@ -18,7 +18,7 @@ const pCreateImageMock = () => {
         title: faker.lorem.words(5),
         url: faker.random.image(),
         account: resultMock.accountMock.account._id,
-        awskey: faker.lorem.words(1),
+        // awskey: faker.lorem.words(1),
       }).save();
     })
     .then((image) => {
