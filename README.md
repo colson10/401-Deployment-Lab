@@ -1,12 +1,10 @@
-# Lab 19 - Authorization - File Management
+# Lab 20 - Back-End Deployment
 **Author**: Carl Olson
-**Version**: 1.2.0
+**Version**: 1.3.0
 
 ## Overview
-This is a continuation of previous labs using basic/bearer authentication and MongoDB/mongoose schemas. For this lab, I added a third model (image) which represents a file asset and can be stored on AWS S3. The metadata about the image file is stored in MongDB.
+This lab project involved deploying the previous authentication/authorization lab. I deployed on Heroku and have continuous integration monitoring via Travis CI. I used mLab for the MongoDB database.
 
-## Testing
-To start the server for testing, enter in the command line: ```npm run dbon```. Then to start the test, enter: ```npm run test```. To turn the server off, enter: ```npm run dboff```.
 
 #### Image Model
 
